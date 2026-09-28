@@ -53,3 +53,37 @@ Remove the `~/.tam/` folder, or delete single records with the `memory_delete` t
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+---
+
+## Codex / ChatGPT
+
+The same repository is also a Codex plugin in the portable [Agent Plugins](https://agent-plugins.org) format. Codex reads different files than Claude Code, so the two sets do not interfere:
+
+| File | Used by |
+|---|---|
+| `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `.mcp.json` | Claude Code, Claude Cowork |
+| `plugin.json`, `mcp.json`, `.agents/plugins/marketplace.json`, `assets/` | Codex |
+| `skills/memory-protocol/SKILL.md` | both |
+
+### Install in Codex CLI
+
+```
+codex plugin marketplace add vbcherepanov/total-agent-memory-plugin
+codex plugin add total-agent-memory@vbcherepanov
+```
+
+Requirement: [uv](https://docs.astral.sh/uv/getting-started/installation/), as for Claude Code. The plugin's `mcp.json` declares one local stdio server, `uvx total-agent-memory==14.6.0`, with the version pinned. Codex starts it when a session begins and shows its tools under the server name `memory`.
+
+Codex passes only its own allowlist of environment variables to plugin MCP servers, so a `TAM_MEMORY_DIR` exported in your shell does not reach the server. Data goes to `~/.tam/`, the same folder the Claude Code plugin uses, so both agents share one memory. If you need another folder or other settings, install the server with the installer from the main repository (`install.sh --ide codex`) instead of the plugin, which writes a regular `[mcp_servers]` entry to `~/.codex/config.toml`. Use one of the two, not both.
+
+To turn the server off without removing the skill:
+
+```toml
+[plugins."total-agent-memory@vbcherepanov".mcp_servers.memory]
+enabled = false
+```
+
+### ChatGPT
+
+The ChatGPT desktop app reads the same local marketplaces as Codex; this was not tested with this plugin. In ChatGPT on the web and on mobile local MCP servers do not run, and this plugin is not listed in the public ChatGPT and Codex plugin directory. That directory accepts MCP servers only on a public HTTPS address. total-agent-memory keeps its data on your machine, so there is no public endpoint to list.

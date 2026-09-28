@@ -1,0 +1,20 @@
+{
+  "name": "vbcherepanov",
+  "interface": {
+    "displayName": "Vitalii Cherepanov"
+  },
+  "plugins": [
+    {
+      "name": "total-agent-memory",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
