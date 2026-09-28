@@ -8,6 +8,7 @@
   },
   "homepage": "https://totalmemory.dev",
   "repository": "https://github.com/vbcherepanov/total-agent-memory-plugin",
+  "privacyPolicyUrl": "https://github.com/vbcherepanov/total-agent-memory-plugin/blob/main/PRIVACY.md",
   "license": "MIT",
   "keywords": [
     "memory",
