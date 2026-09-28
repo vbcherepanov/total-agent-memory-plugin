@@ -1,0 +1,20 @@
+{
+  "name": "total-agent-memory",
+  "version": "14.6.0",
+  "description": "Persistent local memory for AI coding agents: decisions, solutions, facts and session summaries stored in SQLite on your machine and recalled by hybrid search. Adds the total-agent-memory MCP server and the memory-protocol skill.",
+  "author": {
+    "name": "Vitalii Cherepanov",
+    "url": "https://github.com/vbcherepanov"
+  },
+  "homepage": "https://totalmemory.dev",
+  "repository": "https://github.com/vbcherepanov/total-agent-memory-plugin",
+  "license": "MIT",
+  "keywords": [
+    "memory",
+    "mcp",
+    "knowledge-graph",
+    "local-first",
+    "context",
+    "recall"
+  ]
+}

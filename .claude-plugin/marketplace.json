@@ -1,0 +1,17 @@
+{
+  "name": "vbcherepanov",
+  "description": "Local-first tooling for AI coding agents.",
+  "owner": {
+    "name": "Vitalii Cherepanov",
+    "url": "https://github.com/vbcherepanov"
+  },
+  "plugins": [
+    {
+      "name": "total-agent-memory",
+      "description": "Persistent local memory for AI coding agents: an MCP server that stores decisions, solutions and session summaries in SQLite on your machine, plus the memory-protocol skill.",
+      "source": "./",
+      "category": "productivity",
+      "tags": ["memory", "mcp", "knowledge-graph", "local-first", "context"]
+    }
+  ]
+}
