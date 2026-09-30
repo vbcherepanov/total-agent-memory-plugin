@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "total-agent-memory",
-  "version": "14.6.0",
+  "version": "14.7.0",
   "description": "Persistent local memory for AI coding agents: decisions, solutions, facts and session summaries stored in SQLite on your machine and recalled by hybrid search. Adds the total-agent-memory MCP server and the memory-protocol skill.",
   "author": {
     "name": "Vitalii Cherepanov",
@@ -23,7 +23,7 @@
       "interface": {
         "displayName": "Total Agent Memory",
         "shortDescription": "Local memory that survives between agent sessions",
-        "longDescription": "Gives the agent a persistent memory on your machine. The bundled MCP server (uvx total-agent-memory==14.6.0) stores decisions, solutions, facts, lessons, errors and session summaries in a local SQLite database and returns them by hybrid full-text and vector search. The memory-protocol skill tells the agent when to recall and when to save. Nothing is sent to a server run by the author. Requires uv on the machine where Codex runs.",
+        "longDescription": "Gives the agent a persistent memory on your machine. The bundled MCP server (uvx total-agent-memory==14.7.0) stores decisions, solutions, facts, lessons, errors and session summaries in a local SQLite database and returns them by hybrid full-text and vector search. The memory-protocol skill tells the agent when to recall and when to save. Nothing is sent to a server run by the author. Requires uv on the machine where Codex runs.",
         "developerName": "Vitalii Cherepanov",
         "category": "Productivity",
         "capabilities": ["Read", "Write"],

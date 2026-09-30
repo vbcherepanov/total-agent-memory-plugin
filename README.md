@@ -22,7 +22,7 @@ Requirement: [uv](https://docs.astral.sh/uv/getting-started/installation/) must 
 
 ## What runs
 
-The plugin starts one local process: `uvx total-agent-memory==14.6.0`. The version is pinned; the plugin never installs a newer release on its own. On first start, `uvx` downloads the `total-agent-memory` package from PyPI into its cache, which takes about ten seconds on a fast connection.
+The plugin starts one local process: `uvx total-agent-memory==14.7.0`. The version is pinned; the plugin never installs a newer release on its own. On first start, `uvx` downloads the `total-agent-memory` package from PyPI into its cache, which takes about ten seconds on a fast connection.
 
 The server speaks MCP over stdio. It has no hooks in this plugin and runs no background jobs outside the MCP process.
 
@@ -73,7 +73,7 @@ codex plugin marketplace add vbcherepanov/total-agent-memory-plugin
 codex plugin add total-agent-memory@vbcherepanov
 ```
 
-Requirement: [uv](https://docs.astral.sh/uv/getting-started/installation/), as for Claude Code. The plugin's `mcp.json` declares one local stdio server, `uvx total-agent-memory==14.6.0`, with the version pinned. Codex starts it when a session begins and shows its tools under the server name `memory`.
+Requirement: [uv](https://docs.astral.sh/uv/getting-started/installation/), as for Claude Code. The plugin's `mcp.json` declares one local stdio server, `uvx total-agent-memory==14.7.0`, with the version pinned. Codex starts it when a session begins and shows its tools under the server name `memory`.
 
 Codex passes only its own allowlist of environment variables to plugin MCP servers, so a `TAM_MEMORY_DIR` exported in your shell does not reach the server. Data goes to `~/.tam/`, the same folder the Claude Code plugin uses, so both agents share one memory. If you need another folder or other settings, install the server with the installer from the main repository (`install.sh --ide codex`) instead of the plugin, which writes a regular `[mcp_servers]` entry to `~/.codex/config.toml`. Use one of the two, not both.
 

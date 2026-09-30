@@ -3,7 +3,7 @@
     "memory": {
       "command": "uvx",
       "args": [
-        "total-agent-memory==14.6.0"
+        "total-agent-memory==14.7.0"
       ],
       "env": {
         "MEMORY_MODE": "fast"
